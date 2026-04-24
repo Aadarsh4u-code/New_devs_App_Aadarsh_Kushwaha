@@ -13,6 +13,13 @@ class UserProfileBase(BaseModel):
     language: str = "en"
     theme: str = "light"
 
+class RevenueResponse(BaseModel):
+    property_id: str
+    total_revenue: str
+    reservations_count: int
+    currency: str
+    timezone: str
+
 class UserProfileCreate(UserProfileBase):
     pass
 
