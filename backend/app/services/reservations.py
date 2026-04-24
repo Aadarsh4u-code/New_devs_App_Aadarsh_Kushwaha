@@ -188,5 +188,5 @@ async def calculate_total_revenue(property_id: str, tenant_id: str) -> Dict[str,
             "total": mock_property_data['total'],
             "currency": "USD",
             "count": mock_property_data['count'],
-            "timezone": "UTC"  # Default to UTC on error
+            "timezone": mock_property_data.get('timezone', 'UTC')  # Default to UTC if not specified
         }
